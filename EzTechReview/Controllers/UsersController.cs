@@ -9,8 +9,12 @@ namespace EzTechReview.Controllers
 {
     public class UsersController : Controller
     {
-        private EzTechReviewEntities db = new EzTechReviewEntities();
+        readonly EztechreviewEntities db = new EztechreviewEntities();
 
+        public ActionResult Index()
+        {
+            return View(db.Users.ToList());
+        }
 
         [HttpGet]
         public ActionResult Login()
@@ -19,9 +23,8 @@ namespace EzTechReview.Controllers
         }
 
 
-
         [HttpPost]
-        public ActionResult Login(LoginUser login)
+        public ActionResult Login(User login)
         {
 
             if (ModelState.IsValid)
@@ -37,7 +40,7 @@ namespace EzTechReview.Controllers
 
                     //return RedirectToAction("UserDashboard", new { email = user.UserEmail });
                     //  return RedirectToAction("UserDashboard");
-                    return RedirectToAction("Profile","Home", new { area = "" });
+                    return RedirectToAction("ProductDashboard", "ProductDetails", new { area = "" });
 
                 }
                 else
@@ -52,6 +55,5 @@ namespace EzTechReview.Controllers
 
             return View();
         }
-
     }
 }

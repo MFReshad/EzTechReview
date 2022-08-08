@@ -1,0 +1,77 @@
+﻿@model IEnumerable<EzTechReview.Models.Product>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h1 style="text-align:center">Products</h1>
+
+<p style="text-align:center">
+    @Html.ActionLink("Add New Product", "Create", "Products",
+                   new { @class = "btn btn-warning" })
+</p>
+
+<table class="table">
+    <thead class="table table-dark">
+        <tr style="text-align:center">
+            <th scope="col">
+                @Html.DisplayNameFor(model => model.ProductName)
+            </th>
+            <th scope="col">
+                @Html.DisplayNameFor(model => model.ProductPrice)
+            </th>
+            <th scope="col">
+                @Html.DisplayNameFor(model => model.ProductDetails)
+            </th>
+            <th scope="col">
+                @Html.DisplayNameFor(model => model.ProductImg)
+            </th>
+            <th scope="col">
+                @Html.DisplayNameFor(model => model.Category.CategoryName)
+            </th>
+            <th scope="col">
+                Actions
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr style="text-align:center">
+                <td>
+                    @Html.DisplayFor(modelItem => item.ProductName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ProductPrice)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ProductDetails)
+                </td>
+                <td>
+                    <img src="@Url.Content(item.ProductImg)" width="20" height="50" class="card-img-top" alt="...">
+
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Category.CategoryName)
+                </td>
+                <td>
+
+                    @Html.ActionLink("Edit", "Edit", "Products", new { id = item.ProductID },
+                    new { @class = "btn btn-outline-dark" })
+
+                    @Html.ActionLink("Details", "Details", "Products", new { id = item.ProductID },
+                    new { @class = "btn btn-outline-success" })
+
+                    @Html.ActionLink("Delete", "Delete", "Products", new { id = item.ProductID },
+                    new { @class = "btn btn-outline-danger" })
+
+                </td>
+            </tr>
+        }
+    </tbody>
+
+</table>
+<p style="text-align:center">
+    @Html.ActionLink("Back To Admin Panel", "AdminDashboard", "Admins", null,
+    new { @class = "btn btn-warning" })
+</p>

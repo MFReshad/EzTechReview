@@ -11,12 +11,85 @@ namespace EzTechReview.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+    using System.Web;
+
     public partial class User
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public User()
+        {
+            this.Answers = new HashSet<Answer>();
+            this.Comments = new HashSet<Comment>();
+            this.Followers = new HashSet<Follower>();
+            this.Issues = new HashSet<Issue>();
+            this.Pendings = new HashSet<Pending>();
+            this.Questions = new HashSet<Question>();
+            this.Replies = new HashSet<Reply>();
+            this.Reviews = new HashSet<Review>();
+            this.WishLists = new HashSet<WishList>();
+        }
+    
         public int UserID { get; set; }
+        [Required]
+        [Display(Name = "User Name")]
+        [DataType(DataType.Text)]
         public string UserName { get; set; }
+
+        [Required]
+        [Display(Name = "Email ID")]
+        [DataType(DataType.EmailAddress)]
         public string UserEmail { get; set; }
+
+        [Required]
+        [Display(Name = " Password")]
+        [DataType(DataType.Password)]
+        [MaxLength(12, ErrorMessage = "Maximum 12 Characters")]
+        [MinLength(5, ErrorMessage = "Minimum 5 length")]
+
         public string UserPassword { get; set; }
+
+        [Required]
+        [Display(Name = "Confirm Password")]
+        [DataType(DataType.Password)]
+        [Compare("UserPassword", ErrorMessage = "Password Not Matched")]
+        public string ConfirmPassword { get; set; }
+
+        [Required]
+        [Display(Name = "Contact Number")]
+        public int UserPhone { get; set; }
+
+        [Display(Name = "Address")]
+        public string UserAdress { get; set; }
+
+        [Display(Name = "Image")]
+        public string UserImg { get; set; }
+
+        public HttpPostedFileBase user_img_file { get; set; }
+
+        public Nullable<bool> IsEmailVerified { get; set; }
+        public Nullable<System.Guid> ActivationCode { get; set; }
+
+        [Display(Name = "EzTechReview")]
+        public Nullable<decimal> tp_point { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Answer> Answers { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Comment> Comments { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Follower> Followers { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Issue> Issues { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Pending> Pendings { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Question> Questions { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Reply> Replies { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Review> Reviews { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<WishList> WishLists { get; set; }
     }
 }

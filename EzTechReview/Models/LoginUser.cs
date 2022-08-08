@@ -9,7 +9,7 @@ using CompareAttribute = System.ComponentModel.DataAnnotations.CompareAttribute;
 namespace EzTechReview.Models
 {
     public class LoginUser
-    {
+    { 
         [Required]
         [Display(Name = " Enter Email Address")]
         [DataType(DataType.EmailAddress)]
@@ -22,6 +22,6 @@ namespace EzTechReview.Models
         [Compare("UserPassword", ErrorMessage = "Password Not Matched")]
         public string UserPassword { get; set; }
 
-        public string ConString = @"data source=RD\SQLEXPRESS;initial catalog=;integrated security=True;pooling=False;MultipleActiveResultSets=True;App=EntityFramework&quot;";
+        public string ConString = @"data source=122O144O163HI\SQLEXPRESS;initial catalog=Eztechreview;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework&quot;";
     }
 }

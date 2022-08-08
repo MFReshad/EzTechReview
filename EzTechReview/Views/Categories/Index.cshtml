@@ -1,0 +1,58 @@
+﻿@model IEnumerable<EzTechReview.Models.Category>
+
+@{
+    ViewBag.Title = "Index";
+
+    if (Session["AdminSessionEmail"] == null)
+    {
+        Response.Redirect("~/Admins/AdminLogin");
+    }
+}
+
+<h1 style="text-align:center">Categories</h1>
+
+
+<p style="text-align:center">
+    @Html.ActionLink("Add New Category", "Create", "Categories",
+                   new { @class = "btn btn-warning" })
+</p>
+
+<table class="table">
+    <thead class="table table-dark">
+        <tr style="text-align:center">
+            <th scope="col">
+                @Html.DisplayNameFor(model => model.CategoryName)
+            </th>
+            <th scope="col">
+                Actions
+            </th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr style="text-align:center">
+                <td>
+                    @Html.DisplayFor(modelItem => item.CategoryName)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", "Categories", new { id = item.CategoryID },
+                       new { @class = "btn btn-outline-dark" })
+
+                    @Html.ActionLink("Details", "Details", "Categories", new { id = item.CategoryID },
+                       new { @class = "btn btn-outline-success" })
+
+                    @Html.ActionLink("Delete", "Delete", "Categories", new { id = item.CategoryID },
+                        new { @class = "btn btn-outline-danger" })
+                </td>
+            </tr>
+        }
+    </tbody>
+
+</table>
+
+<p style="text-align:center">
+    @Html.ActionLink("Back To Admin Panel", "AdminDashboard", "Admins", null,
+    new { @class = "btn btn-warning" })
+</p>
