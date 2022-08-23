@@ -22,6 +22,10 @@ namespace EzTechReview.Models
         [Compare("UserPassword", ErrorMessage = "Password Not Matched")]
         public string UserPassword { get; set; }
 
-        public string ConString = @"data source=122O144O163HI\SQLEXPRESS;initial catalog=Eztechreview;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework&quot;";
+        //public string ConString = @"data source=122O144O163HI\SQLEXPRESS;initial catalog=Eztechreview;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework&quot;";
+        public string ConString = @"data source=122O144O163HI\SQLEXPRESS;initial catalog=Eztechreview;integrated security=True;multipleactiveresultsets=True;application name=EntityFramework&quot;";
+
+        //data source=122O144O163HI\SQLEXPRESS;initial catalog=Eztechreview;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework&quot;" providerName="System.Data.EntityClient" />
+        //<add name="EztechreviewEntitiess" connectionString="metadata=res://*/Models.Model1.csdl|res://*/Models.Model1.ssdl|res://*/Models.Model1.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=122O144O163HI\SQLEXPRESS;initial catalog=Eztechreview;user id=rd;password=1234;MultipleActiveResultSets=True;App=EntityFramework&quot;"
     }
 }

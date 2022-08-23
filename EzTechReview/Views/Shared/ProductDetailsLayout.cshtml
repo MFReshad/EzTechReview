@@ -1,0 +1,27 @@
+﻿@model EzTechReview.Models.Product
+
+@{ 
+    Layout = "_Layout.cshtml";
+}
+
+<div class="container body-content">
+    <hr />
+    <nav class="nav background-color: #eee;">
+        <a class="nav-link active" aria-current="page">
+            @Html.ActionLink("Specification", "ProductDetails", "ProductDetails", null,
+            new { @class = "btn btn-dark" })
+        </a>
+        <a class="nav-link">
+            @Html.ActionLink("Review", "ReviewsInProductDetails", "Review", null,
+            new { @class = "btn btn-dark" })
+        </a>
+        <a class="nav-link">
+            @Html.ActionLink("Issue", "productIssues", "Review", null,
+             new { @class = "btn btn-dark" })
+        </a>
+        <br />
+    </nav>
+    <div class"my-4"></div>
+    <hr />
+    @RenderBody()
+</div>

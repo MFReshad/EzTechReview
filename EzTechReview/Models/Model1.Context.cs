@@ -16,10 +16,10 @@ namespace EzTechReview.Models
     public partial class EztechreviewEntities : DbContext
     {
         public EztechreviewEntities()
-                : base("name=EztechreviewEntities")
+            : base("name=EztechreviewEntities")
         {
         }
-
+    
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             throw new UnintentionalCodeFirstException();

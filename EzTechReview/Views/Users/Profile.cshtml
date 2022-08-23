@@ -1,17 +1,118 @@
-﻿@{
-    ViewBag.Title = "Profile";
-}
-<h2>@ViewBag.Title.</h2>
-<h3>This is profile</h3>
+﻿@model IEnumerable<EzTechReview.Models.Review>
 
-<address>
-    One Microsoft Way<br />
-    Redmond, WA 98052-6399<br />
-    <abbr title="Phone">P:</abbr>
-    425.555.0100
-</address>
+@using EzTechReview.Models
 
-<address>
-    <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
-    <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
-</address>
+@{ ViewBag.Title = "Profile";
+                if (Session["UserSessionEmail"] == null)
+                {
+                    Response.Redirect("~/Users/Login");
+
+                }
+
+                User u = (User)ViewData["user_info"]; }
+<div class="container body-content my-4">
+    <!--Profile Picture-->
+    @*
+        <img src="https://source.unsplash.com/1400x600/?portrait" class="bd-placeholder-img rounded-circle" width="200" height="200">
+
+
+    *@
+
+    @{ if (u.UserImg == null)
+                    {
+        <img src="https://source.unsplash.com/1400x600/?portrait" class="bd-placeholder-img rounded-circle" width="200" height="200"> }
+                    else
+                    {
+        <img src="@Url.Content(u.UserImg)" class="bd-placeholder-img rounded-circle" width="200" height="200" alt="pic"> } }
+
+
+    <div class="mx-4 my-4">
+        <h1>
+            @u.UserName
+        </h1>
+
+
+        @{ if (u.tp_point == null)
+                        {
+            <span class="badge bg-secondary">  New user </span> }
+                        else
+                        {
+            <h6>Tech Points <span class="badge bg-secondary">  @u.tp_point </span></h6> } }
+
+        <p>@u.UserAdress</p>
+
+    </div>
+
+    <!--Modal-->
+    <div class="mx-4 my-4">
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#exampleModal1">
+            Followers
+        </button>
+        <button type="button" class="btn btn-info mx-4" data-bs-toggle="modal" data-bs-target="#exampleModal2">
+            Following
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Followers</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <h4>No Followers Yet</h4>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Following</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <h4>No Following Yet</h4>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h6>Reviewed By @u.UserName</h6>
+    <hr class="featurette-divider">
+
+    <!--Review Cards-->
+
+    @foreach (var item in Model)
+    {
+
+<div class="card my-4">
+    <h5 class="card-header">
+
+        @Html.DisplayFor(modelItem => item.Product.ProductName)
+
+    </h5>
+    <div class="card-body">
+        <h5 class="card-title">Review</h5>
+        <p class="card-text">
+
+            @Html.DisplayFor(modelItem => item.ReviewPost)
+        </p>
+
+        <p>
+            @Html.ActionLink("View Details", "ReviewDetails", "Review", new { id = item.ReviewID }, new { @class = "btn btn-dark" })
+
+        </p>
+    </div>
+</div>}
+
+
+</div>
+

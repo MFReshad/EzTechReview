@@ -29,8 +29,9 @@ namespace EzTechReview.Models
             this.Reviews = new HashSet<Review>();
             this.WishLists = new HashSet<WishList>();
         }
-    
+
         public int UserID { get; set; }
+
         [Required]
         [Display(Name = "User Name")]
         [DataType(DataType.Text)]
@@ -70,7 +71,7 @@ namespace EzTechReview.Models
         public Nullable<bool> IsEmailVerified { get; set; }
         public Nullable<System.Guid> ActivationCode { get; set; }
 
-        [Display(Name = "EzTechReview")]
+        [Display(Name = "TP Point")]
         public Nullable<decimal> tp_point { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

@@ -12,6 +12,7 @@ namespace EzTechReview.Models
     using System;
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
+    using System.Web;
 
     public partial class Product
     {
@@ -40,7 +41,8 @@ namespace EzTechReview.Models
 
         [Display(Name = "Product Image")]
         public string ProductImg { get; set; }
-    
+        public HttpPostedFileBase product_img_file { get; set; }
+
         public virtual Category Category { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Issue> Issues { get; set; }

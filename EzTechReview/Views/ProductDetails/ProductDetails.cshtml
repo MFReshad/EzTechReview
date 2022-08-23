@@ -1,0 +1,22 @@
+﻿@model EzTechReview.Models.Product
+
+@{
+    ViewBag.Title = "ProductDetails";
+    Layout = "~/Views/Shared/ProductDetailsLayout.cshtml";
+}
+
+
+
+
+<img src="@Url.Content(Model.ProductImg)" width="250" height="250" />
+
+<h1 class="card-title">@Html.DisplayFor(modelItem => Model.ProductName)</h1>
+<h6> @Html.DisplayFor(modelItem => Model.ProductDetails)</h6>
+<p class="card-text"> Price: @Html.DisplayFor(modelItem => Model.ProductPrice)</p>
+<p class="card-text"> @Html.DisplayFor(modelItem => Model.Category.CategoryName)</p>
+
+
+
+
+
+

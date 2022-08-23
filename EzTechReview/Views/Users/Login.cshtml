@@ -6,7 +6,8 @@
     var msg = ViewBag.LoginFailed;
 }
 <!DOCTYPE html>
-<html>
+<!--<html>
+
 <head>
 
     <link rel="stylesheet" href="~/Content/core-min-16.css">
@@ -32,74 +33,184 @@
                 <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.svg" class="img-fluid" alt="Phone image">
             </div>
             <div class="col-md-7 col-lg-5 col-xl-5 offset-xl-1">
-                <form action="Login" method="post">
-                    <!-- Email input -->
-                    <div class="form-outline mb-4">
-                        <input type="email" name="UserEmail" id="form1Example13" class="form-control form-control-lg">
-                        <label class="form-label" for="form1Example13" style="margin-left: 0px;">Email address</label>
-                        <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 88.8px;"></div><div class="form-notch-trailing"></div></div>
-                    </div>
+                <form action="Login" method="post">-->
+<!-- Email input -->
+<!--<div class="form-outline mb-4">
+    <input type="email" name="UserEmail" id="form1Example13" class="form-control form-control-lg">
+    <label class="form-label" for="form1Example13" style="margin-left: 0px;">Email address</label>
+    <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 88.8px;"></div><div class="form-notch-trailing"></div></div>
+</div>-->
+<!-- Password input -->
+<!--<div class="form-outline mb-4">
+    <input type="password" name="UserPassword" id="form1Example23" class="form-control form-control-lg">
+    <label class="form-label" for="form1Example23" style="margin-left: 0px;">Password</label>
+    <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 64px;"></div><div class="form-notch-trailing"></div></div>
+</div>
 
-                    <!-- Password input -->
-                    <div class="form-outline mb-4">
-                        <input type="password" name="UserPassword" id="form1Example23" class="form-control form-control-lg">
-                        <label class="form-label" for="form1Example23" style="margin-left: 0px;">Password</label>
-                        <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 64px;"></div><div class="form-notch-trailing"></div></div>
-                    </div>
+<div class="d-flex justify-content-around align-items-center mb-4">-->
+<!-- Checkbox -->
+<!--<div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="form1Example3" checked="">
+        <label class="form-check-label" for="form1Example3"> Remember me </label>
+    </div>
+    <a href="#!">Forgot password?</a>
+</div>-->
+<!-- Submit button -->
+<!--<button type="submit" value="SIGN IN" class="btn btn-primary btn-lg btn-block">Sign in</button>
 
-                    <div class="d-flex justify-content-around align-items-center mb-4">
-                        <!-- Checkbox -->
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="form1Example3" checked="">
-                            <label class="form-check-label" for="form1Example3"> Remember me </label>
-                        </div>
-                        <a href="#!">Forgot password?</a>
-                    </div>
+                <div class="divider d-flex align-items-center my-4">
+                    <p class="text-center fw-bold mx-3 mb-0 text-muted">OR</p>
+                </div>
 
-                    <!-- Submit button -->
-                    <button type="submit" value="SIGN IN" class="btn btn-primary btn-lg btn-block">Sign in</button>
+                <a class="btn btn-primary btn-lg btn-block" style="background-color: #3b5998" href="#!" role="button">
+                    <i class="fab fa-facebook-f me-2"></i>Continue with Facebook
+                </a>
+                <a class="btn btn-primary btn-lg btn-block" style="background-color: #55acee" href="#!" role="button">
+                    <i class="fab fa-twitter me-2"></i>Continue with Twitter
+                </a>
 
-                    <div class="divider d-flex align-items-center my-4">
-                        <p class="text-center fw-bold mx-3 mb-0 text-muted">OR</p>
-                    </div>
-
-                    <a class="btn btn-primary btn-lg btn-block" style="background-color: #3b5998" href="#!" role="button">
-                        <i class="fab fa-facebook-f me-2"></i>Continue with Facebook
-                    </a>
-                    <a class="btn btn-primary btn-lg btn-block" style="background-color: #55acee" href="#!" role="button">
-                        <i class="fab fa-twitter me-2"></i>Continue with Twitter
-                    </a>
-
-                </form>
-                <br>
-                <p align="right"><a href="@Url.Action("Registration","Users")"> Don't have an account?</a></p>
-            </div>
-            
+            </form>
+            <br>
+            <p align="right"><a href=" "> Don't have an account?</a></p>
         </div>
 
-    </section>
-
-    <!--Footer Starts Here-->
-    <div class="container">
-        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-            <p class="col-md-4 mb-0 text-muted">&copy;@DateTime.Now.Year - EzTechReview</p>
-
-            <a href="/" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
-                <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
-            </a>
-
-            <ul class="nav col-md-4 justify-content-end">
-                <li class="nav-item"><a href="#top" class="nav-link px-2 text-muted">Home</a></li>
-                <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Questions</a></li>
-                <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About Us</a></li>
-                <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Contact Us</a></li>
-                <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Join Us</a></li>
-
-            </ul>
-        </footer>
     </div>
-    <!--Footer Ends Here-->
+
+</section>-->
+<!--Footer Starts Here-->
+<!--<div class="container">
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+        <p class="col-md-4 mb-0 text-muted">&copy;@DateTime.Now.Year - EzTechReview</p>
+
+        <a href="/" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+            <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+        </a>
+
+        <ul class="nav col-md-4 justify-content-end">
+            <li class="nav-item"><a href="#top" class="nav-link px-2 text-muted">Home</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Questions</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About Us</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Contact Us</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Join Us</a></li>
+
+        </ul>
+    </footer>
+</div>-->
+<!--Footer Ends Here-->
+<!--</body>
+</html>-->
+<html lang="zxx">
+<head>
+
+    <!-- custom-theme -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Esteem Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+    <script type="application/x-javascript">
+        addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+               function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!-- //custom-theme -->
+    <link href="~/Externals/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="~/Externals/css/snow.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="~/Externals/css/component.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="~/Externals/css/style_grid.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="~/Externals/css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <!-- font-awesome-icons -->
+    <link href="~/Externals/css/font-awesome.css" rel="stylesheet">
+    <!-- //font-awesome-icons -->
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800" rel="stylesheet">
+</head>
+<body>
+    <!-- /pages_agile_info_w3l -->
+
+    <div class="pages_agile_info_w3l">
+        <!-- /login -->
+        <div class="over_lay_agile_pages_w3ls">
+            <div class="registration">
+
+                <div class="signin-form profile">
+                    <h2>Sign in Form</h2>
+                    <div class="login-form">
+                        <form action="Login" method="post">
+                            <input type="email" name="UserEmail" placeholder="E-mail" />
+
+                            <input type="password" name="UserPassword" placeholder="Password" />
+                            @if (msg != null)
+                            {
+
+                <p class="text-danger">@msg</p>}
+                            <div class="tp">
+                                <input type="submit" value="SIGN IN">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="login-social-grids">
+                        <ul>
+                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa fa-rss"></i></a></li>
+                        </ul>
+                    </div>
+                    <p><a href="@Url.Action("Registration","Users")"> Don't have an account?</a></p>
+
+                    <h6>
+                        <p>@Html.ActionLink("Back To Home", "Index", "Home")</p>
+                    </h6>
+                </div>
+            </div>
+            <!--copy rights start here-->
+            <div class="copyrights_agile">
+                <p>© All Rights Reserved by Tech Review Point </p>
+            </div>
+            <!--copy rights end here-->
+        </div>
+    </div>
+    <!-- /login -->
+    <!-- //pages_agile_info_w3l -->
+    <!-- js -->
+
+    <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+    <script src="js/modernizr.custom.js"></script>
+
+    <script src="js/classie.js"></script>
+    <script src="js/gnmenu.js"></script>
+    <script>new gnMenu(document.getElementById('gn-menu'));</script>
+
+    <!-- //js -->
+
+    <script src="js/screenfull.js"></script>
+    <script>$(function () {
+            $('#supported').text('Supported/allowed: ' + !!screenfull.enabled);
+
+            if (!screenfull.enabled) {
+                return false;
+            }
+
+
+
+            $('#toggle').click(function () {
+                screenfull.toggle($('#container')[0]);
+            });
+        });</script>
+    <script src="js/jquery.nicescroll.js"></script>
+    <script src="js/scripts.js"></script>
+    <script src="js/snow.js"></script>
+    <script type="text/javascript">var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-36251023-1']);
+        _gaq.push(['_setDomainName', 'jqueryscript.net']);
+        _gaq.push(['_trackPageview']);
+
+        (function () {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();</script>
+    <script type="text/javascript" src="js/bootstrap-3.1.1.min.js"></script>
 
 
 </body>
 </html>
+
+
+

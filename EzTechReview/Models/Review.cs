@@ -11,7 +11,9 @@ namespace EzTechReview.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+    using System.Web;
+
     public partial class Review
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -19,15 +21,26 @@ namespace EzTechReview.Models
         {
             this.Comments = new HashSet<Comment>();
         }
-    
+
+        [Display(Name = "Review ID")]
         public int ReviewID { get; set; }
+
+        [Display(Name = "Review Point")]
         public Nullable<int> review_point { get; set; }
+
+        [Display(Name = "Review ID")]
         public int UserID { get; set; }
         public int ProductID { get; set; }
+
+        [Display(Name = "Review")]
         public string ReviewPost { get; set; }
+
+        [Display(Name = "Review Date")]
         public Nullable<System.DateTime> ReviewDate { get; set; }
         public string Picture { get; set; }
-    
+
+        public HttpPostedFileBase review_img_file { get; set; }
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Comment> Comments { get; set; }
         public virtual Product Product { get; set; }
