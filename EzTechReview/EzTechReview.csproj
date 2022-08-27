@@ -131,8 +131,13 @@
     <Compile Include="Controllers\AdminsController.cs" />
     <Compile Include="Controllers\CategoriesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\IssueController.cs" />
+    <Compile Include="Controllers\IssuesController.cs" />
     <Compile Include="Controllers\ProductDetailsController.cs" />
     <Compile Include="Controllers\ProductsController.cs" />
+    <Compile Include="Controllers\ReviewController.cs" />
+    <Compile Include="Controllers\ReviewDetailsController.cs" />
+    <Compile Include="Controllers\ReviewsController.cs" />
     <Compile Include="Controllers\UsersController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -254,6 +259,24 @@
     <Content Include="Views\Users\Create.cshtml" />
     <Content Include="Views\Users\Delete.cshtml" />
     <Content Include="Views\Users\Details.cshtml" />
+    <Content Include="Views\Users\Edit.cshtml" />
+    <Content Include="Views\ProductDetails\AddingReview.cshtml" />
+    <Content Include="Views\ProductDetails\Chart.cshtml" />
+    <Content Include="Views\ProductDetails\Search.cshtml" />
+    <Content Include="Views\ProductDetails\Wishing.cshtml" />
+    <Content Include="Views\Issue\IssuesInProductDetails.cshtml" />
+    <Content Include="Views\Issues\Create.cshtml" />
+    <Content Include="Views\Issues\Delete.cshtml" />
+    <Content Include="Views\Issues\Details.cshtml" />
+    <Content Include="Views\Issues\Edit.cshtml" />
+    <Content Include="Views\Issues\Index.cshtml" />
+    <Content Include="Views\Review\ProductIssues.cshtml" />
+    <Content Include="Views\Review\ReviewDetails.cshtml" />
+    <Content Include="Views\Review\ReviewsInProductDetails.cshtml" />
+    <Content Include="Views\ReviewDetails\ReviewDetails.cshtml" />
+    <Content Include="Views\Reviews\Create.cshtml" />
+    <Content Include="Views\Reviews\Index.cshtml" />
+    <Content Include="Views\Reviews\Details.cshtml" />
     <None Include="Views\Users\Login.cshtml" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -271,6 +294,8 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Users\Registration.cshtml" />
     <Content Include="Views\Users\UserDashboard.cshtml" />
+    <Content Include="Views\Users\ProfileUpdate.cshtml" />
+    <Content Include="Views\Users\Users.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

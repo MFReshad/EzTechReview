@@ -1,0 +1,70 @@
+﻿@using EzTechReview.Models
+@model EzTechReview.Models.Issue
+
+@{
+    ViewBag.Title = "ProductIssues";
+    Layout = "~/Views/Shared/ProductDetailsLayout.cshtml";
+}
+
+
+<!--Post a Issues Cards Starts Here-->
+
+
+
+@using (Html.BeginForm())
+{
+@Html.AntiForgeryToken()
+
+                <div class="form-horizontal">
+                    <h4>Issue</h4>
+                    <hr />
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                    <div class="form-group">
+
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.IssuePost,
+                            new
+                                 {
+                                     htmlAttributes = new
+                                     {
+                                         placeholder = "Do you have any issue regarding this product?",
+                               @class = "form-control"
+                                     }
+                                 })
+
+                            @Html.ValidationMessageFor(model => model.IssuePost, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <br />
+                    <div class="col-12">
+                        <input type="submit" value="Post" class="btn btn-success" />
+                    </div>
+
+
+
+                </div>}
+
+<!--Post a Issues Ends Starts Here-->
+<!--Issues cards start here-->
+
+
+@foreach (var item in ViewData["is-sue"] as IEnumerable<Issue>)
+{
+
+
+<div class="card my-4">
+    <h3 class="card-header">
+        @item.User.UserName
+
+    </h3>
+    <div class="card-body">
+        <blockquote class="blockquote mb-0">
+            <p>@item.IssuePost</p>
+            <p>@item.IssueDate</p>
+        </blockquote>
+    </div>
+</div>}
+
+
+<!--Issues cards Ends here-->
