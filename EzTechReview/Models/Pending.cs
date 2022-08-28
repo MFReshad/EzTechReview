@@ -11,11 +11,14 @@ namespace EzTechReview.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class Pending
     {
         public int PendingID { get; set; }
         public int UserID { get; set; }
+
+        [Display(Name = "Request")]
         public string Mail { get; set; }
         public Nullable<System.DateTime> Date { get; set; }
     

@@ -130,11 +130,15 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AdminsController.cs" />
     <Compile Include="Controllers\CategoriesController.cs" />
+    <Compile Include="Controllers\CommentsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\IssueController.cs" />
     <Compile Include="Controllers\IssuesController.cs" />
+    <Compile Include="Controllers\PendingsController.cs" />
     <Compile Include="Controllers\ProductDetailsController.cs" />
     <Compile Include="Controllers\ProductsController.cs" />
+    <Compile Include="Controllers\QandAController.cs" />
+    <Compile Include="Controllers\QuestionsController.cs" />
     <Compile Include="Controllers\RepliesController.cs" />
     <Compile Include="Controllers\ReviewController.cs" />
     <Compile Include="Controllers\ReviewDetailsController.cs" />
@@ -287,6 +291,19 @@
     <Content Include="Views\Replies\Delete.cshtml" />
     <Content Include="Views\Replies\Details.cshtml" />
     <Content Include="Views\Replies\Edit.cshtml" />
+    <Content Include="Views\Comments\Index.cshtml" />
+    <Content Include="Views\Comments\Create.cshtml" />
+    <Content Include="Views\Comments\Delete.cshtml" />
+    <Content Include="Views\Comments\Details.cshtml" />
+    <Content Include="Views\Comments\Edit.cshtml" />
+    <Content Include="Views\Pendings\Index.cshtml" />
+    <Content Include="Views\Pendings\Create.cshtml" />
+    <Content Include="Views\Pendings\Delete.cshtml" />
+    <Content Include="Views\Pendings\Details.cshtml" />
+    <Content Include="Views\Pendings\Edit.cshtml" />
+    <Content Include="Views\QandA\Ans.cshtml" />
+    <Content Include="Views\QandA\Ques.cshtml" />
+    <Content Include="Views\QandA\Ques_de.cshtml" />
     <None Include="Views\Users\Login.cshtml" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -309,6 +326,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Questions\" />
     <Folder Include="Views\TempSearch\" />
   </ItemGroup>
   <ItemGroup>
