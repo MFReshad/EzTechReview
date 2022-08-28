@@ -1,0 +1,69 @@
+﻿@model IEnumerable<EzTechReview.Models.Reply>
+
+
+@{ ViewBag.Title = "Index";
+                //  Layout = "~/Views/Shared/ProductDetailsLayout.cshtml";
+}
+
+<h1 style="text-align:center">Replies</h1>
+
+<table class="table">
+    <thead class="table table-dark">
+        <tr style="text-align:center">
+
+            <th>
+                @Html.DisplayNameFor(model => model.User.UserName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Issue.IssuePost)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Reply1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ReplyDate)
+            </th>
+            @*<th>
+            @Html.DisplayNameFor(model => model.Product.ProductName)
+        </th>
+            *@
+            <th>
+                Actions
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var item in Model)
+        {
+        <tr style="text-align:center">
+            <td>
+                @Html.DisplayFor(modelItem => item.User.UserName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Issue.IssuePost)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Reply1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ReplyDate)
+            </td>
+  
+        
+            <td>
+                @Html.ActionLink("Edit", "Edit", "Replies", new { id = item.ReplyID },
+                    new { @class = "btn btn-outline-dark" })
+                @Html.ActionLink("Details", "Details", "Replies", new { id = item.ReplyID },
+                      new { @class = "btn btn-outline-success" })
+                @Html.ActionLink("Delete", "Delete", "Replies", new { id = item.ReplyID },
+                     new { @class = "btn btn-outline-danger" })
+            </td>
+        </tr>}
+    </tbody>
+
+</table>
+<p style="text-align:center">
+    @Html.ActionLink("Back To Admin Panel", "AdminDashboard", "Admins", null,
+    new { @class = "btn btn-warning" })
+</p>

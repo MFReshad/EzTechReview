@@ -135,6 +135,7 @@
     <Compile Include="Controllers\IssuesController.cs" />
     <Compile Include="Controllers\ProductDetailsController.cs" />
     <Compile Include="Controllers\ProductsController.cs" />
+    <Compile Include="Controllers\RepliesController.cs" />
     <Compile Include="Controllers\ReviewController.cs" />
     <Compile Include="Controllers\ReviewDetailsController.cs" />
     <Compile Include="Controllers\ReviewsController.cs" />
@@ -151,6 +152,7 @@
     <Compile Include="Models\Category.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\Update-profile.cs" />
     <Compile Include="Models\Comment.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -277,6 +279,14 @@
     <Content Include="Views\Reviews\Create.cshtml" />
     <Content Include="Views\Reviews\Index.cshtml" />
     <Content Include="Views\Reviews\Details.cshtml" />
+    <Content Include="Views\Reviews\Delete.cshtml" />
+    <Content Include="Views\Reviews\Edit.cshtml" />
+    <Content Include="Views\Reviews\Review_Post_Details.cshtml" />
+    <Content Include="Views\Replies\Create.cshtml" />
+    <Content Include="Views\Replies\Index.cshtml" />
+    <Content Include="Views\Replies\Delete.cshtml" />
+    <Content Include="Views\Replies\Details.cshtml" />
+    <Content Include="Views\Replies\Edit.cshtml" />
     <None Include="Views\Users\Login.cshtml" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">

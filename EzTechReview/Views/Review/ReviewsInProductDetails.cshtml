@@ -66,12 +66,16 @@
         <p class="card-text">
             @item.ReviewPost
         </p>
-        @{ if (item.review_point == null)
-                            {
-            <p>No point yet</p> }
-                            else
-                            {
-            @item.review_point } }
+        @{
+            if (item.review_point == null)
+            {
+                <p>No point yet</p>
+            }
+            else
+            {
+                <p>Review point: @item.review_point</p>
+            }
+        }
 
 
         <p>

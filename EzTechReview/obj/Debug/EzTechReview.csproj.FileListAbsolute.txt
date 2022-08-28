@@ -237,3 +237,4 @@ D:\Cse\3.2\CSE 3200 - SD Lab\Project\EzTechReview\EzTechReview\obj\Debug\EzTechR
 D:\Cse\3.2\CSE 3200 - SD Lab\Project\EzTechReview\EzTechReview\obj\Debug\EzTechReview.csproj.CopyComplete
 D:\Cse\3.2\CSE 3200 - SD Lab\Project\EzTechReview\EzTechReview\obj\Debug\EzTechReview.dll
 D:\Cse\3.2\CSE 3200 - SD Lab\Project\EzTechReview\EzTechReview\obj\Debug\EzTechReview.pdb
+D:\Cse\3.2\CSE 3200 - SD Lab\Project\EzTechReview\EzTechReview\obj\Debug\EzTechReview.csproj.AssemblyReference.cache

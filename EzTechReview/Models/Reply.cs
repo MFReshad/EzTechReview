@@ -11,12 +11,15 @@ namespace EzTechReview.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class Reply
     {
         public int ReplyID { get; set; }
         public int UserID { get; set; }
         public int IssueID { get; set; }
+
+        [Display(Name = "Reply")]
         public string Reply1 { get; set; }
         public Nullable<System.DateTime> ReplyDate { get; set; }
     

@@ -11,7 +11,7 @@
         <dt>
             @Html.DisplayNameFor(model => model.IssuePost)
         </dt>
-
+        
         <dd>
             @Html.DisplayFor(model => model.IssuePost)
         </dd>
@@ -48,7 +48,13 @@
 </p>
 
 <p>
-    <a href="@Url.Action("Index","Replies")">Click here to response to this problem </a>
+    <a href="@Url.Action("Create","Replies", new { id = Model.IssueID })"> Click here to response to this problem </a>
+</p>
+
+
+<p>
+    @Html.ActionLink("Click here to response to this problem", "Create", "Replies", new { id = Model.IssueID },
+           new { @class = "btn btn-outline-dark" })
 </p>
 
 
