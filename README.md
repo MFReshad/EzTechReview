@@ -1,8 +1,6 @@
-# Digital Content Organizer
+# EZTechReview
 
 EZTechReview is an e-learning web application built with ASP.NET that enables users to quickly find out the details of any technical equipment by reading and writing reviews. In an era of numerous information, it saves users time by preventing difficulties from false material, promoting open conversation, and offering a brief and useful response—especially when it comes to product selection.
-
-
 
 
 ## Features
